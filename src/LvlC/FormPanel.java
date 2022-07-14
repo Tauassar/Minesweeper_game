@@ -1,13 +1,8 @@
 package LvlC;
-import java.awt.Dimension;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
 
-import javax.swing.BorderFactory;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.*;
 import javax.swing.border.Border;
+import java.awt.*;
 
 public class FormPanel extends JPanel {
 	protected JTextField p1_field;
@@ -20,13 +15,14 @@ public class FormPanel extends JPanel {
 	}
 	protected void initWin() {
 		Dimension dim=getPreferredSize();	
-		dim.width=250;
+		dim.width=300;
 		setPreferredSize(dim);
+		int textFieldWidth = 20;
 		
 		p1_label=new JLabel("Name of the first player  ");
 		p2_label=new JLabel("Name of the second player ");
-		p1_field=new JTextField(10);
-		p2_field=new JTextField(10);
+		p1_field=new JTextField("",textFieldWidth);
+		p2_field=new JTextField("",textFieldWidth);
 		
 		Border innerBorder= BorderFactory.createTitledBorder("Add player name");
 		Border outerBorder= BorderFactory.createEmptyBorder(5,5,5,5);
@@ -38,7 +34,7 @@ public class FormPanel extends JPanel {
 
 		gc.weightx=1;
 		gc.weighty=1;
-		
+
 		//First row
 		addrow1(gc);
 		//second row
@@ -47,13 +43,14 @@ public class FormPanel extends JPanel {
 	protected void addrow1(GridBagConstraints gc) {
 		gc.gridx=0;
 		gc.gridy=0;
-		gc.fill=GridBagConstraints.NONE;
+		gc.fill=GridBagConstraints.HORIZONTAL;
 		gc.anchor=GridBagConstraints.LINE_END;
 		add(p1_label, gc);
 		
 		gc.gridx=1;
 		gc.gridy=0;
 		gc.anchor=GridBagConstraints.LINE_START;
+
 		add(p1_field, gc);
 	}
 	protected void addrow2(GridBagConstraints gc) {
