@@ -40,7 +40,7 @@ Executable JAR file located inside **dist** folder, to run it you need to open t
 
 <br />
 
-* **Compile source code**
+* **Run using source code**
 
 The source code is located inside the **src** folder. 
 
