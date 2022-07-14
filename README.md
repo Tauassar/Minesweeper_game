@@ -44,9 +44,9 @@ Executable JAR file located inside **dist** folder, to run it you need to open t
 
 The source code is located inside the **src** folder. 
 
-To run level picker, you have to run Main class inside the **src** folder.
+To run game using level picker, you have to run Main class inside the **src** folder (src/Main.java).
 
-Otherwise, each level of the game can be run separately, each folder inside src belongs to dedicated level's package. To run level separately(without level picker) you have to run main method for specific level.
+Otherwise, each level of the game can be run separately, each folder inside src belongs to dedicated level's package. To run level separately (without level picker) you have to run main method for specific level.
 
 Main methods located in following files:
 * src/LvlA/LvlA.java
