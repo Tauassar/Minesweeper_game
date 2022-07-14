@@ -20,7 +20,7 @@ public class LvlA{
     	st.play();
     }
 	 
-	 protected void play() {
+	 public void play() {
 	 createSkull();
 	 createSkin();
 	while(true) {
